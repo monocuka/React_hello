@@ -1,14 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {Hello, World} from "./Hello.js"
 
 
-function HelloWorld(params) {
+function HelloWorld() {
     return(
-        <div>Hola Mundo</div>
+        <div>
+            <Hello /> <World />
+        </div>
     )
 }
 
 ReactDOM.render(
 
-    <HelloWorld/>>
+    <HelloWorld/>,
+    document.querySelector('#root')
 )
