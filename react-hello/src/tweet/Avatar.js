@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Avatar = () =>{
+const Avatar = ({hash}) =>{
+    const url=`https://www.gravatar.com/avatar/${hash}`;
     return (
-        <img 
-        src="https://www.gravatar.com/avatar/763dcd4dad38689d57aa9d83a60bfaa5.jpg"
-        className='avatar'
-        alt='avatar' />
+        <img
+            src={url}
+            className="avatar"
+            alt="avatar" />
     );
 } 
 export default Avatar
