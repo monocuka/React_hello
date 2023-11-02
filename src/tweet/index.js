@@ -11,8 +11,9 @@ export const Tweet = ({ tweet }) => {
         <div className='tweet'>
             <Avatar hash={tweet.gravatar} />
             <div className='content'>
-                <Author />  <Time />
-                <Message />  
+                <Author author={tweet.author} /> 
+                <Time time={tweet.timestamp} />
+                <Message text={tweet.message} />  
             <div className='buttons'>
                 <ReplyButton />
                 <RetweetButton />
@@ -26,7 +27,7 @@ export const Tweet = ({ tweet }) => {
 
 const testTweet = {
     message: "Something about cats.",
-    gravatar: "xyz",
+    gravatar:"763dcd4dad38689d57aa9d83a60bfaa5.jpg",
     author: {
         handle: "catperson",
         name: "IAMA Cat Person"
