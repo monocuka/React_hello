@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactDOM  from 'react-dom';
 import './index.css';
-import Avatar from './Avatar';
-import { Message, Time } from './Message';
-import { Author } from './Author';
+import Avatar from './Avatar.js';
+import { Message, Time } from './Message.js';
+import { Author } from './Author.js';
 import { ReplyButton, RetweetButton, MoreOptionsButton, LikeButton } from './buttons.js';
 
 export const Tweet = ({ tweet }) => {
@@ -16,8 +15,8 @@ export const Tweet = ({ tweet }) => {
                 <Message text={tweet.message} />  
             <div className='buttons'>
                 <ReplyButton />
-                <RetweetButton />
-                <LikeButton />
+                <RetweetButton count={tweet.retweets}  />
+                <LikeButton count={tweet.likes} />
                 <MoreOptionsButton />
                 </div>
             </div>
@@ -25,16 +24,5 @@ export const Tweet = ({ tweet }) => {
     );
 }
 
-const testTweet = {
-    message: "Something about cats.",
-    gravatar:"763dcd4dad38689d57aa9d83a60bfaa5.jpg",
-    author: {
-        handle: "catperson",
-        name: "IAMA Cat Person"
-    },
-    likes: 2,
-    retweets: 20,
-    timestamp: "2016-07-30 21:24:37"
-};
 
-ReactDOM.render(<Tweet tweet={testTweet}/>, document.querySelector('#root'));
+

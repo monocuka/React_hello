@@ -1,9 +1,9 @@
 import React from "react";
-import moment from 'moment';
+import moment from 'moment'
 
 export const Message = ({text}) => {
     return [
-        <div className="message">
+        <div key="msg" className="message">
             {text}
         </div>
     ]
