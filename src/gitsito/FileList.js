@@ -1,16 +1,13 @@
+import { FileListItem } from "./FileListItems";
 
 
+const FileList = ({files}) => (
 
-
-
-export const FileList = ({files}) => (
-
-    <table className="file-list">
+    <table className="file-list" >
         <tbody>
             {files.map(file => (
-                <tr className="file-list-item" key={file.id}>
-                    <td className="file-name">{file.name}</td>
-                </tr>
+                /* ahora se usa FileListItem aquí */
+                <FileListItem key={file.id} file={file} />
             ))}
         </tbody>
     </table>
