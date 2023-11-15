@@ -1,7 +1,12 @@
+import { FileName } from "./FileName";
+import { PropTypes } from "react";
 
-
-export const FileListItem = ({ file }) => (
+const FileListItem=({ file }) => (
     <tr className="file-list-item" >
-        <td className="file-name" > {file.name} </td>
+        <FileName file={file} />
     </tr>
 );
+
+FileListItem.propTypes={
+    file: PropTypes.object.isRequired
+};
